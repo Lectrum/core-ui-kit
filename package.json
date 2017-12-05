@@ -1,0 +1,9 @@
+{
+  "name": "core-ui-kit",
+  "version": "0.0.0",
+  "description": "Basic structure for React and Redux application.",
+  "main": "",
+  "repository": "git@github.com:Lectrum/core-ui-kit.git",
+  "author": "amulyk <a.mulyk@lectrum.io>",
+  "license": "MIT"
+}
