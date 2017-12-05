@@ -1,2 +1,2 @@
-# generator-ui-kit
-UI Kit.
+# core-ui-kit
+Basic structure for React and Redux application.
