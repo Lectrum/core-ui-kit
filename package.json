@@ -7,6 +7,7 @@
   "author": "amulyk <a.mulyk@lectrum.io>",
   "license": "MIT",
   "devDependencies": {
+    "nodemon": "^1.14.3",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1"
