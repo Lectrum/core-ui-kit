@@ -5,5 +5,10 @@
   "main": "",
   "repository": "git@github.com:Lectrum/core-ui-kit.git",
   "author": "amulyk <a.mulyk@lectrum.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.1"
+  }
 }
