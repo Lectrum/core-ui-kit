@@ -6,7 +6,12 @@
   "repository": "git@github.com:Lectrum/core-ui-kit.git",
   "author": "amulyk <a.mulyk@lectrum.io>",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon --watch webpack/ --exec \"webpack-dev-server --env development --config=./webpack/index.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
+    "html-webpack-plugin": "^2.30.1",
     "nodemon": "^1.14.3",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
