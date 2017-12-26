@@ -4,11 +4,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 
 const development = require('./development').developmentConfig;
+const production = require('./production').productionConfig;
 
-const PATHS = {
-    app: path.join(__dirname, '../app'),
-    build: path.join(__dirname, '../build'),
-};
+const PATHS = require('./paths').PATHS;
 
 const commonConfig = merge([
     {
@@ -28,5 +26,9 @@ const commonConfig = merge([
 ]);
 
 module.exports = env => {
+    if (env === 'production') {
+        return merge(commonConfig, production);
+    }
+
     return merge(commonConfig, development);
 };
