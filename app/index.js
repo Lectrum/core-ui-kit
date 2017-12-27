@@ -6,6 +6,7 @@ function* test() {
   yield console.log(3);
 }
 const t = test();
+
 t.next();
 t.next();
 t.next();
