@@ -1,6 +1,7 @@
+// Core
 import merge from 'webpack-merge';
 
-export const developmentConfig = merge([
+export const development = merge([
     {
         output: {
             devtoolModuleFilenameTemplate:
