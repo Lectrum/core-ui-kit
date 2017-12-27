@@ -1,11 +1,11 @@
-import { clean } from "./tools/clean";
-import { setFreeVariable } from "./tools/setFreeVariable";
-import { extractBundles } from "./tools/extractBundles";
-import { PATHS } from './paths';
-import UglifyWebpackPlugin from 'uglifyjs-webpack-plugin';
+// Core
 import merge from 'webpack-merge';
+import UglifyWebpackPlugin from 'uglifyjs-webpack-plugin';
 
-export const productionConfig = merge([
+import { clean, setFreeVariable, extractBundles } from "../tools/";
+import { PATHS } from '../paths';
+
+export const production = merge([
     {
         performance: {
             hints: 'warning',
