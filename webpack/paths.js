@@ -1,8 +1,6 @@
-const path = require('path');
+import path from 'path';
 
-const PATHS = {
+export const PATHS = {
     app: path.join(__dirname, '../app'),
     build: path.join(__dirname, '../build'),
 };
-
-exports.PATHS = PATHS;

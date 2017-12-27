@@ -1,11 +1,11 @@
-const clean = require('./tools/clean').clean;
-const setFreeVariable = require('./tools/setFreeVariable').setFreeVariable;
-const extractBundles = require('./tools/extractBundles').extractBundles;
-const PATHS = require('./paths').PATHS;
-const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
-const merge = require('webpack-merge');
+import { clean } from "./tools/clean";
+import { setFreeVariable } from "./tools/setFreeVariable";
+import { extractBundles } from "./tools/extractBundles";
+import { PATHS } from './paths';
+import UglifyWebpackPlugin from 'uglifyjs-webpack-plugin';
+import merge from 'webpack-merge';
 
-const productionConfig = merge([
+export const productionConfig = merge([
     {
         performance: {
             hints: 'warning',
@@ -36,5 +36,3 @@ const productionConfig = merge([
     ]),
     setFreeVariable('process.env.NODE_ENV', 'production'),
 ]);
-
-exports.productionConfig = productionConfig;

@@ -1,6 +1,6 @@
-const merge = require('webpack-merge');
+import merge from 'webpack-merge';
 
-const developmentConfig = merge([
+export const developmentConfig = merge([
     {
         output: {
             devtoolModuleFilenameTemplate:
@@ -22,5 +22,3 @@ const developmentConfig = merge([
         },
     }
 ]);
-
-exports.developmentConfig = developmentConfig;
