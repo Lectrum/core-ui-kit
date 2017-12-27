@@ -21,12 +21,20 @@ export const common = merge([
     },
     {
         module: {
-            rules: [{
-                test: /\.js$/,
-                include: PATHS.app,
-                exclude: /node_modules/,
-                use: "babel-loader",
-            }],
+            rules: [
+                {
+                    enforce: 'pre',
+                    test: /\.js$/,
+                    use: 'eslint-loader',
+                    exclude: /(node_modules)/,
+                },
+                {
+                    test: /\.js$/,
+                    include: PATHS.app,
+                    exclude: /(node_modules)/,
+                    use: "babel-loader",
+                }
+            ],
         },
     },
 ]);
