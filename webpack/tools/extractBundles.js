@@ -1,6 +1,6 @@
-const webpack = require('webpack');
+import webpack from 'webpack';
 
-exports.extractBundles = bundles => ({
+export const extractBundles = bundles => ({
     plugins: bundles.map(
         bundle => new webpack.optimize.CommonsChunkPlugin(bundle)
     ),

@@ -1,6 +1,6 @@
-const webpack = require('webpack');
+import webpack from 'webpack';
 
-exports.setFreeVariable = (key, value) => {
+export const setFreeVariable = (key, value) => {
     const env = {};
     env[key] = JSON.stringify(value);
 

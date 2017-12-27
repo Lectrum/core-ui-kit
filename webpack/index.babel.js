@@ -1,10 +1,8 @@
-const path = require('path');
-const merge = require('webpack-merge');
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require('webpack');
+import merge from 'webpack-merge';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const development = require('./development').developmentConfig;
-const production = require('./production').productionConfig;
+import { developmentConfig } from './developmentConfig';
+import { productionConfig } from './productionConfig';
 
 const PATHS = require('./paths').PATHS;
 
@@ -35,10 +33,10 @@ const commonConfig = merge([
     },
 ]);
 
-module.exports = env => {
+export default (env) => {
     if (env === 'production') {
-        return merge(commonConfig, production);
+        return merge(commonConfig, productionConfig);
     }
 
-    return merge(commonConfig, development);
+    return merge(commonConfig, developmentConfig);
 };
