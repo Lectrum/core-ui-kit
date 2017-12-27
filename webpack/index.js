@@ -23,6 +23,16 @@ const commonConfig = merge([
             }),
         ],
     },
+    {
+        module: {
+            rules: [{
+                test: /\.js$/,
+                include: PATHS.app,
+                exclude: /node_modules/,
+                use: "babel-loader",
+            }],
+        },
+    },
 ]);
 
 module.exports = env => {
