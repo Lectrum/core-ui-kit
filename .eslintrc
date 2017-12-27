@@ -11,6 +11,8 @@ parserOptions:
 
 plugins:
   - react
+  - prettier
+    prettier/prettier: "error"
 
 env:
   browser: true
